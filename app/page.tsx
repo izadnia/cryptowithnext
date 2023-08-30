@@ -11,20 +11,7 @@ export default async function Home() {
 
 const options = {
   method: 'GET',
-  url: 'https://coinranking1.p.rapidapi.com/coins',
-  params: {
-    referenceCurrencyUuid: 'yhjMzLPhuIDl',
-    timePeriod: '24h',
-    'tiers[0]': '1',
-    orderBy: 'marketCap',
-    orderDirection: 'desc',
-    limit: '50',
-    offset: '0'
-  },
-  headers: {
-    'X-RapidAPI-Key': 'db9e5ffa7emsh574a701c4343428p1eb5efjsn7357e73becce',
-    'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
-  }
+  url: 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en',
 };
 
 try {
