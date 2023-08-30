@@ -1,11 +1,5 @@
 export default function ItemSection({ children }: any) {
-  console.log(children);
   return (
-    <div className="flex flex-col justify-center ">
-      {children.map((item: any) => (
-        
-        <div key={`Id-${item}`} className="m-auto my-2 cursor-pointer">{item}</div>
-      ))}
-    </div>
+    <div className="flex justify-center m-2  cursor-pointer">{children}</div>
   );
 }
