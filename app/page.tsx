@@ -1,3 +1,5 @@
+import Result from "@/node_modules/postcss/lib/result";
+'use client'
 export default async function Home() {
   const url =
     "https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0";
@@ -18,6 +20,9 @@ export default async function Home() {
   }
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <div>
+        {}
+      </div>
       Hello world
     </main>
   );
