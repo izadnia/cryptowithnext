@@ -1,17 +1,18 @@
 'use client'
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ContainerDefault from "../../container/page";
+import { SidebarContext } from "../page";
 
-function Header({ setToggler }: any) {
+function Header() {
+  const { isSidebarOpen, setIsSidebarOpen } = useContext(SidebarContext);
+
+  const handleToggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <ContainerDefault>
-      <div
-        onClick={() => {
-          setToggler(true);
-        }}
-      >
-        sideToggler
-      </div>
+      <div onClick={handleToggleSidebar}>sideToggler</div>
       <div>search</div>
       <div>title</div>
     </ContainerDefault>
