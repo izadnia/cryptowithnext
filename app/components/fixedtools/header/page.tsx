@@ -1,10 +1,17 @@
+'use client'
+import { useState } from "react";
 import ContainerDefault from "../../container/page";
 
-function Header() {
-  
+function Header({ setToggler }: any) {
   return (
     <ContainerDefault>
-      <div>sideToggler</div>
+      <div
+        onClick={() => {
+          setToggler(true);
+        }}
+      >
+        sideToggler
+      </div>
       <div>search</div>
       <div>title</div>
     </ContainerDefault>
