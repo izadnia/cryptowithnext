@@ -31,7 +31,7 @@ function SideBar() {
 
       {menuItems.map(({ icon: Icon, ...menu }) => {
         return (
-          <Link href={menu.link}>
+          <Link key={(menu.id)+menu.label} href={menu.link}>
             <div
               className={`flex rounded-xl p-3 m-1 ${
                 segment == menu.label ? "bg-slate-600 text-white" : null
