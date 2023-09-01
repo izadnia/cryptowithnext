@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { LogoutIcon } from "./icons";
 
 interface UserProfileProps {
   login: boolean;
@@ -24,7 +25,7 @@ function UserProfile({ login, username }: UserProfileProps) {
           </p>
         </div>
         <div className="m-auto my-1  cursor-pointer">
-          <p>Profile</p>
+          <LogoutIcon />
         </div>
         <hr className="w-[90%] my-3" />
       </div>
