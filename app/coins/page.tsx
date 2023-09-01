@@ -2,7 +2,7 @@ import React from 'react'
 
 function Page() {
   return (
-    <div>Coins</div>
+    <div className='p-4'>Coins</div>
   )
 }
 

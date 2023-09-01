@@ -4,7 +4,15 @@ import { SidebarContext } from "../page";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 
-import { ArticleIcon, HomeIcon, UsersIcon, VideosIcon, PinIcon } from "./icons";
+import {
+  ArticleIcon,
+  HomeIcon,
+  UsersIcon,
+  VideosIcon,
+  PinIcon,
+  NightIcon,
+  DayIcon,
+} from "./icons";
 import { useContext, useEffect, useState } from "react";
 
 const menuItems = [
@@ -39,12 +47,17 @@ function SideBar({ sideOpen }: any) {
       }`}
     >
       <div className={isSidebarOpen ? "visible" : "hidden"}>
-        <div className="flex justify-end mb-3">
+        <div className="flex justify-between mb-3 ">
+          <div
+            className={`justify-left cursor-pointer w-10 hover:bg-slate-500 b rounded-xl p-2`}
+          >
+            {<DayIcon /> }{<NightIcon />}
+          </div>
           <div
             onClick={handleTogglePin}
-            className={`justify-left cursor-pointer w-10 ${
+            className={`justify-left cursor-pointer w-10 hover:bg-slate-500 ${
               isSidebarPinned
-                ? "bg-slate-300  rounded-xl p-2"
+                ? "bg-slate-600  rounded-xl p-2"
                 : " rounded-xl p-2"
             }`}
           >
