@@ -1,17 +1,10 @@
-'use client'
+"use client";
 import UserProfile from "./UserProfile";
 import { SidebarContext } from "../page";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 
-import {
-  ArticleIcon,
-  CollapsIcon,
-  HomeIcon,
-  LogoIcon,
-  UsersIcon,
-  VideosIcon,
-} from "./icons";
+import { ArticleIcon, HomeIcon, UsersIcon, VideosIcon, PinIcon } from "./icons";
 import { useContext, useEffect, useState } from "react";
 
 const menuItems = [
@@ -23,10 +16,21 @@ const menuItems = [
 
 function SideBar({ sideOpen }: any) {
   const segment = useSelectedLayoutSegment();
-  const { isSidebarOpen, setIsSidebarOpen } = useContext(SidebarContext);
-  function handleItemClick() {
-    setIsSidebarOpen(false);
-  }
+  const {
+    isSidebarOpen,
+    setIsSidebarOpen,
+    isSidebarPinned,
+    setIsSidebarPinned,
+  } = useContext(SidebarContext);
+
+  const handleItemClick = () => {
+    if (!isSidebarPinned) {
+      setIsSidebarOpen(false);
+    }
+  };
+  const handleTogglePin = () => {
+    setIsSidebarPinned(!isSidebarPinned);
+  };
 
   return (
     <div
@@ -35,6 +39,18 @@ function SideBar({ sideOpen }: any) {
       }`}
     >
       <div className={isSidebarOpen ? "visible" : "hidden"}>
+        <div className="flex justify-end mb-3">
+          <div
+            onClick={handleTogglePin}
+            className={`justify-left cursor-pointer w-10 ${
+              isSidebarPinned
+                ? "bg-slate-300  rounded-xl p-2"
+                : " rounded-xl p-2"
+            }`}
+          >
+            <PinIcon />
+          </div>
+        </div>
         <UserProfile login={true} username={"user"} />
 
         {menuItems.map(({ icon: Icon, ...menu }) => (
