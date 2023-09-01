@@ -1,4 +1,4 @@
-
+'use client'
 import { useContext, useState } from "react";
 import ContainerDefault from "../../container/page";
 import { SidebarContext } from "../page";

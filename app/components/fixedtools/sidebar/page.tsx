@@ -1,4 +1,4 @@
-
+'use client'
 import UserProfile from "./UserProfile";
 import { SidebarContext } from "../page";
 import Link from "next/link";
@@ -24,7 +24,6 @@ const menuItems = [
 function SideBar({ sideOpen }: any) {
   const segment = useSelectedLayoutSegment();
   const { isSidebarOpen, setIsSidebarOpen } = useContext(SidebarContext);
-  console.log(isSidebarOpen);
   function handleItemClick() {
     setIsSidebarOpen(false);
   }

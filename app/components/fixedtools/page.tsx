@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import SideBar from "./sidebar/page";
 import Header from "./header/page";
 import Nav from "./navigation/page";
