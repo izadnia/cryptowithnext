@@ -18,47 +18,27 @@ export default function Home() {
   // }
 
   return (
-    <div>
+    <div className="">
       <main className="p-4">
         <div>section 1 : image | welcome text</div>
+        <br />
         <div className="w-full flex flex-col md:flex-row">
           <div className="w-1/2">aaaaaaaaaaaaaaaaaaa</div>
           <div className=" w-1/2">
-            <p>
-              Welcome to IranianCryptoHub, your ultimate destination for
-              cryptocurrency education, consulting, news, and valuable insights.
-              Whether you're a beginner looking to understand the fundamentals
-              of cryptocurrencies or an experienced investor seeking expert
-              guidance, we've got you covered. Explore our comprehensive
-              resources, stay updated with the latest crypto news, and unlock
-              the potential of digital currencies. Join our vibrant community
-              and embark on an exciting journey into the world of
-              cryptocurrencies.
+            <p className="">
+            Welcome to IranianCryptoHub, your ultimate destination for cryptocurrency education, consulting, news, and valuable insights.Whether you&apos;re a beginner looking to understand the fundamentals of cryptocurrencies or an experienced investor seeking expert guidance, we&apos;ve got you covered. Explore our comprehensive resources, stay updated with the latest crypto news, and unlock the potential of digital currencies. Join our vibrant community and embark on an exciting journey into the world of cryptocurrencies.
             </p>
           </div>
         </div>
+        <br />
         <div>section 2 : Carts of 3 coins</div>
         <div>section 3 : investment plans</div>
         <div>section 4 : Blogs</div>
-        <p>
-          Welcome to IranianCryptoHub, your ultimate destination for
-          cryptocurrency education, consulting, news, and valuable insights.
-          Whether you're a beginner looking to understand the fundamentals of
-          cryptocurrencies or an experienced investor seeking expert guidance,
-          we've got you covered. Explore our comprehensive resources, stay
-          updated with the latest crypto news, and unlock the potential of
-          digital currencies. Join our vibrant community and embark on an
-          exciting journey into the world of cryptocurrencies.
+        <p className="">
+        Welcome to IranianCryptoHub, your ultimate destination for cryptocurrency education, consulting, news, and valuable insights.Whether you&apos;re a beginner looking to understand the fundamentals of cryptocurrencies or an experienced investor seeking expert guidance, we&apos;ve got you covered. Explore our comprehensive resources, stay updated with the latest crypto news, and unlock the potential of digital currencies. Join our vibrant community and embark on an exciting journey into the world of cryptocurrencies.
         </p>
-        <p>
-          Welcome to IranianCryptoHub, your ultimate destination for
-          cryptocurrency education, consulting, news, and valuable insights.
-          Whether you're a beginner looking to understand the fundamentals of
-          cryptocurrencies or an experienced investor seeking expert guidance,
-          we've got you covered. Explore our comprehensive resources, stay
-          updated with the latest crypto news, and unlock the potential of
-          digital currencies. Join our vibrant community and embark on an
-          exciting journey into the world of cryptocurrencies.
+        <p className="">
+        Welcome to IranianCryptoHub, your ultimate destination for cryptocurrency education, consulting, news, and valuable insights.Whether you&apos;re a beginner looking to understand the fundamentals of cryptocurrencies or an experienced investor seeking expert guidance, we&apos;ve got you covered. Explore our comprehensive resources, stay updated with the latest crypto news, and unlock the potential of digital currencies. Join our vibrant community and embark on an exciting journey into the world of cryptocurrencies.
         </p>
         <div>section 5 : last blog post</div>
       </main>
