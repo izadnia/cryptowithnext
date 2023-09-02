@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { default as axios } from "axios";
 import { useEffect, useState } from "react";
+import GraphOfCoin from "../graph/GraphOfCoin";
 
 type coinDataProps = {
   id: string;
@@ -71,7 +72,9 @@ function CartCoin() {
               <p className="m-auto">{item.current_price} $</p>
             </div>
             <div className="flex py-2 my-2">
-              <p className="m-auto">Coin graph</p>
+              <div className="m-auto">
+                <GraphOfCoin />    
+              </div>
             </div>
             <div className="flex pt-8 mt-8">
               <p className="m-auto">MORE ????</p>
