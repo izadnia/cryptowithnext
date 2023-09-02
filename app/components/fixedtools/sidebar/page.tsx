@@ -17,9 +17,9 @@ import { useContext, useEffect, useState } from "react";
 
 const menuItems = [
   { id: 1, label: "Home", icon: HomeIcon, link: "/" },
-  { id: 2, label: "coins", icon: ArticleIcon, link: "/coins" },
-  { id: 3, label: "Blog", icon: UsersIcon, link: "/users" },
-  { id: 4, label: "Academy", icon: VideosIcon, link: "/tutorials" },
+  { id: 2, label: "coins", icon: ArticleIcon, link: "/Pages/Coins" },
+  { id: 3, label: "Blog", icon: UsersIcon, link: "/Pages/Blog" },
+  { id: 4, label: "Academy", icon: VideosIcon, link: "/Pages/Academy" },
 ];
 
 function SideBar({ sideOpen }: any) {
