@@ -18,14 +18,13 @@ export default function Home() {
   // }
 
   return (
-    <div className="">
+    <div>
       <main className="p-4">
         <div>section 1 : image | welcome text</div>
-        <br />
         <div className="w-full flex flex-col md:flex-row">
           <div className="w-1/2">aaaaaaaaaaaaaaaaaaa</div>
           <div className=" w-1/2">
-            <p className="">
+            <p>
               Welcome to IranianCryptoHub, your ultimate destination for
               cryptocurrency education, consulting, news, and valuable insights.
               Whether you're a beginner looking to understand the fundamentals
@@ -38,11 +37,10 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <br />
         <div>section 2 : Carts of 3 coins</div>
         <div>section 3 : investment plans</div>
         <div>section 4 : Blogs</div>
-        <p className="">
+        <p>
           Welcome to IranianCryptoHub, your ultimate destination for
           cryptocurrency education, consulting, news, and valuable insights.
           Whether you're a beginner looking to understand the fundamentals of
@@ -52,7 +50,7 @@ export default function Home() {
           digital currencies. Join our vibrant community and embark on an
           exciting journey into the world of cryptocurrencies.
         </p>
-        <p className="">
+        <p>
           Welcome to IranianCryptoHub, your ultimate destination for
           cryptocurrency education, consulting, news, and valuable insights.
           Whether you're a beginner looking to understand the fundamentals of
