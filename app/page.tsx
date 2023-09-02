@@ -22,15 +22,16 @@ export default function Home() {
   return (
     <div className="">
       <main className="p-4">
-        <div>section 1 : image | welcome text</div>
-        <br />
         <div className="w-full flex flex-col md:flex-row">
-          <div className="md:w-1/2">
-            <Lottie animationData={animationData} />
+          <div className="md:w-1/2 ">
+            <Lottie   animationData={animationData} />
+            <Lottie   animationData={animationData} />
           </div>
-          <div className=" md:w-1/2">
-            <p className="">
-            Welcome to IranianCryptoHub, your ultimate destination for cryptocurrency education, consulting, news, and valuable insights.Whether you&apos;re a beginner looking to understand the fundamentals of cryptocurrencies or an experienced investor seeking expert guidance, we&apos;ve got you covered. Explore our comprehensive resources, stay updated with the latest crypto news, and unlock the potential of digital currencies. Join our vibrant community and embark on an exciting journey into the world of cryptocurrencies.
+          <div className=" md:w-1/2 border-lime-500 shadow-2xl border-[0.5px] rounded-b-[40px] rounded-t-[40px]">
+            
+            <p className="p-2 m-4">
+              <span className="text-semibold">Welcome to IranianCryptoHub,</span><br/>
+             your ultimate destination for cryptocurrency education, consulting, news, and valuable insights.Whether you&apos;re a beginner looking to understand the fundamentals of cryptocurrencies or an experienced investor seeking expert guidance, we&apos;ve got you covered. Explore our comprehensive resources, stay updated with the latest crypto news, and unlock the potential of digital currencies. Join our vibrant community and embark on an exciting journey into the world of cryptocurrencies.
             </p>
           </div>
         </div>
