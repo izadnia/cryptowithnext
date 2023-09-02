@@ -19,18 +19,14 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      <main className="p-4" >
-        <div>
-          section 1 : image|welcome text
-        </div>
-        <div>
-          section 2 : Carts of 3 coins 
-        </div>
-        <div>
-          f
-        </div>
+      <main className="p-4">
+        <div>section 1 : image | welcome text</div>
+        <div>section 2 : Carts of 3 coins</div>
+        <div>section 3 : investment plans</div>
+        <div>section 4 : Blogs</div>
+        <div>section 5 : last blog post</div>
       </main>
-      <Footer  />
+      <Footer />
     </div>
   );
 }
