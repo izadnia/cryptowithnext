@@ -3,6 +3,8 @@
 import axios from "axios";
 import ContainerDefault from "./components/container/page";
 import Footer from "./components/footer/page";
+import Lottie from "lottie-react"
+import animationData from "./components/animationone.json"
 
 export default function Home() {
   // const options = {
@@ -23,8 +25,10 @@ export default function Home() {
         <div>section 1 : image | welcome text</div>
         <br />
         <div className="w-full flex flex-col md:flex-row">
-          <div className="w-1/2">aaaaaaaaaaaaaaaaaaa</div>
-          <div className=" w-1/2">
+          <div className="md:w-1/2">
+            <Lottie animationData={animationData} />
+          </div>
+          <div className=" md:w-1/2">
             <p className="">
             Welcome to IranianCryptoHub, your ultimate destination for cryptocurrency education, consulting, news, and valuable insights.Whether you&apos;re a beginner looking to understand the fundamentals of cryptocurrencies or an experienced investor seeking expert guidance, we&apos;ve got you covered. Explore our comprehensive resources, stay updated with the latest crypto news, and unlock the potential of digital currencies. Join our vibrant community and embark on an exciting journey into the world of cryptocurrencies.
             </p>
