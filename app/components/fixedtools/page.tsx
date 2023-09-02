@@ -16,6 +16,7 @@ export const SidebarContext = createContext<SidebarContextProps>(
 );
 
 function FixedTools({ children }: any) {
+  
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSidebarPinned, setIsSidebarPinned] = useState(false);
 

@@ -48,11 +48,7 @@ function SideBar({ sideOpen }: any) {
     >
       <div className={isSidebarOpen ? "visible" : "hidden"}>
         <div className="flex justify-between mb-3 ">
-          <div
-            className={`justify-left cursor-pointer w-10 hover:bg-slate-500 b rounded-xl p-2`}
-          >
-            {<DayIcon /> }{<NightIcon />}
-          </div>
+
           <div
             onClick={handleTogglePin}
             className={`justify-left cursor-pointer w-10 hover:bg-slate-500 ${
