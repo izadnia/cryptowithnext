@@ -3,7 +3,7 @@ import ContainerDefault from "../container/page";
 function Footer() {
   return (
     <ContainerDefault>
-      <div>footer </div>
+      <div className="max-w-4xl m-auto">footer </div>
     </ContainerDefault>
   );
 }

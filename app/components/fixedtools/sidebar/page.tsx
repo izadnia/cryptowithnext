@@ -2,7 +2,7 @@
 import UserProfile from "./UserProfile";
 import { SidebarContext } from "../page";
 import Link from "next/link";
-import { useSelectedLayoutSegment } from "next/navigation";
+import { useSelectedLayoutSegments } from "next/navigation";
 
 import {
   ArticleIcon,
@@ -17,13 +17,13 @@ import { useContext, useEffect, useState } from "react";
 
 const menuItems = [
   { id: 1, label: "Home", icon: HomeIcon, link: "/" },
-  { id: 2, label: "coins", icon: ArticleIcon, link: "/Pages/Coins" },
+  { id: 2, label: "Coins", icon: ArticleIcon, link: "/Pages/Coins" },
   { id: 3, label: "Blog", icon: UsersIcon, link: "/Pages/Blog" },
   { id: 4, label: "Academy", icon: VideosIcon, link: "/Pages/Academy" },
 ];
 
 function SideBar({ sideOpen }: any) {
-  const segment = useSelectedLayoutSegment();
+  const segment = useSelectedLayoutSegments();
   const {
     isSidebarOpen,
     setIsSidebarOpen,
@@ -39,10 +39,10 @@ function SideBar({ sideOpen }: any) {
   const handleTogglePin = () => {
     setIsSidebarPinned(!isSidebarPinned);
   };
-
+  console.log(segment[1])
   return (
     <div
-      className={`bg-slate-700 bg-opacity-95  shadow-2xl fixed min-h-full ${
+      className={` text-blue-200 bg-slate-700 bg-opacity-95  shadow-2xl min-h-full ${
         isSidebarOpen ? "w-[320px] duration-300 p-4" : "w-0 duration-700"
       }`}
     >
@@ -60,7 +60,7 @@ function SideBar({ sideOpen }: any) {
             <PinIcon />
           </div>
         </div>
-        <UserProfile login={true} username={"user"} />
+        <UserProfile login={false} username={"user"} />
 
         {menuItems.map(({ icon: Icon, ...menu }) => (
           <Link
@@ -70,9 +70,9 @@ function SideBar({ sideOpen }: any) {
           >
             <div
               className={`flex rounded-xl p-3 m-1 ${
-                segment == menu.label ? "bg-slate-600 text-white" : null
+                segment[1] == menu.label ? "bg-slate-600 text-white" : null
               } ${
-                segment == null && menu.label == "Home"
+                segment[1] == null && menu.label == "Home"
                   ? "bg-slate-600 text-white"
                   : null
               } hover:text-white hover:bg-slate-500`}

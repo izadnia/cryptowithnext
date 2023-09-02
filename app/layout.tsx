@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import FixedTools from "./components/fixedtools/page";
+import Footer from "./components/footer/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +18,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className={inter.className} style={{ direction: "rtl" }}>
+      <body
+        suppressHydrationWarning={true}
+        className={inter.className}
+        style={{ direction: "ltr" }}
+      >
         <div className="w-[full] min-h-screen">
-          <FixedTools>{children}</FixedTools>
+          <FixedTools>
+            <div className="max-w-4xl m-auto">{children}</div> 
+            <Footer />
+          </FixedTools>
         </div>
       </body>
     </html>

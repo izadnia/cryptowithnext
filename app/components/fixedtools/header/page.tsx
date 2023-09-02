@@ -60,7 +60,7 @@ function Header() {
       </button>
 
       <div>hi</div>
-      <div>title</div>
+      <div><p className="text-xl text-bold ">IranianCryptoHub</p></div>
     </ContainerDefault>
   );
 }

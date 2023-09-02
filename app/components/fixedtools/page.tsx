@@ -32,7 +32,7 @@ function FixedTools({ children }: any) {
       }}
     >
       <div className=" min-h-screen">
-        <div className="w-full h-[9vh] ">
+        <div className="w-full h-[50px] ">
           <Header />
         </div>
         <div className="flex w-ful min-h-[90vh]">
