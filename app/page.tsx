@@ -20,7 +20,15 @@ export default function Home() {
   return (
     <div className="w-full">
       <main className="p-4" >
-        Hello world
+        <div>
+          section 1 : image|welcome text
+        </div>
+        <div>
+          section 2 : Carts of 3 coins 
+        </div>
+        <div>
+          f
+        </div>
       </main>
       <Footer  />
     </div>

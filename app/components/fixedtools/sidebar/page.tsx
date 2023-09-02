@@ -42,7 +42,7 @@ function SideBar({ sideOpen }: any) {
 
   return (
     <div
-      className={`bg-slate-400  min-h-full ${
+      className={`bg-slate-700 bg-opacity-40 backdrop-blur-sm shadow-2xl fixed min-h-full ${
         isSidebarOpen ? "w-[320px] duration-300 p-4" : "w-0 duration-700"
       }`}
     >
