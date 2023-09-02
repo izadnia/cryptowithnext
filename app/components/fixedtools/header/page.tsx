@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useContext, useState } from "react";
 import ContainerDefault from "../../container/page";
 import { SidebarContext } from "../page";
@@ -54,14 +55,16 @@ function Header() {
   };
 
   return (
-    <ContainerDefault>
+    <div className="flex justify-between w-[full] bg-stone-200 p-3">
       <button className="" onClick={handleToggleSidebar}>
         {isSidebarOpen ? <MenuClose /> : <MenuOpen />}
       </button>
 
       <div>hi</div>
-      <div><p className="text-xl text-bold ">IranianCryptoHub</p></div>
-    </ContainerDefault>
+      <div>
+        <Image className="rounded-xl" width={170} height={24} alt={'loho'} src={'/images/logo.png'} />
+      </div>
+    </div>
   );
 }
 
