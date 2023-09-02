@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className} style={{ direction: "rtl" }}>
-        <div className="w-[full]">
+        <div className="w-[full] min-h-screen">
           <FixedTools>{children}</FixedTools>
         </div>
       </body>

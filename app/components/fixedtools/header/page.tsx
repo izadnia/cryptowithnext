@@ -60,7 +60,7 @@ function Header() {
         {isSidebarOpen ? <MenuClose /> : <MenuOpen />}
       </button>
 
-      <div>search</div>
+      <div>hi</div>
       <div>title</div>
     </ContainerDefault>
   );

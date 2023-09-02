@@ -30,11 +30,11 @@ function FixedTools({ children }: any) {
         setIsSidebarPinned,
       }}
     >
-      <div className="flex flex-col h-screen">
-        <div className="w-full ">
+      <div className=" min-h-screen">
+        <div className="w-full h-[9vh] ">
           <Header />
         </div>
-        <div className="flex w-full">
+        <div className="flex w-ful min-h-[90vh]">
           <SideBar />
           <div className="w-full">
             <Nav />
