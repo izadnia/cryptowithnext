@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{ direction: "rtl" }}>
+      <body suppressHydrationWarning={true} className={inter.className} style={{ direction: "rtl" }}>
         <div className="w-[full] min-h-screen">
           <FixedTools>{children}</FixedTools>
         </div>

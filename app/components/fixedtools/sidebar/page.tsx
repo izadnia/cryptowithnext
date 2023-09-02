@@ -47,7 +47,7 @@ function SideBar({ sideOpen }: any) {
       }`}
     >
       <div className={isSidebarOpen ? "visible" : "hidden"}>
-        <div className="flex justify-between mb-3 ">
+        <div className="flex justify-end mb-3 ">
 
           <div
             onClick={handleTogglePin}

@@ -9,9 +9,8 @@ function PinIcon({ fill = "#fff",stroke = "#fff", ...rest }) {
       viewBox="0 0 24 24"
       fill={fill}
       stroke={stroke}
-      stroke-width={2}
-      stroke-linecap="round"
-      stroke-linejoin="arcs"
+
+
     >
       <circle cx="11.5" cy="8.5" r="5.5" />
       <path d="M11.5 14v7" />
