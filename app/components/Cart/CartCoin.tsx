@@ -56,11 +56,11 @@ function CartCoin() {
   }, []);
 
   return (
-    <div>
-      <div className="  flex  p-2 m-2 overflow-x-scroll overflow-y-hidden">
+    <div className="w-full overflow-x-scroll overflow-y-hidden">
+      <div className="w-[1500px]  flex  p-2 m-2 ">
         {coinData?.slice(0, 5).map((item: coinDataProps) => {
           return (
-            <div key={item.id} className=" p-2 m-4 w-[150px] rounded-xl shadow-xl duration-300 hover:scale-110 hover:bg-slate-400 hover:text-white ">
+            <div key={item.id} className=" p-2 m-4 w-[250px] rounded-xl shadow-xl duration-300 hover:scale-110 hover:bg-slate-400 hover:text-white ">
               <div className="flex py-4 my-4">
                 <div className="m-auto">
                   {<Image alt={item.name} src={item.image} width={50} height={50} />}
@@ -68,6 +68,10 @@ function CartCoin() {
               </div>
               <div className="flex py-4 my-4">
                 <p className="m-auto">{item.name}</p>
+              </div>
+              
+              <div className="flex pt-8 mb-8">
+                <p className="m-auto">Rank : {item.market_cap_rank}</p>
               </div>
               <div className="flex py-2 my-2">
                 <p className="m-auto">{item.current_price} $</p>
@@ -78,7 +82,7 @@ function CartCoin() {
                 </div>
               </div>
               <div className="flex pt-8 mt-8">
-                <p className="m-auto">MORE ????</p>
+                <p className="m-auto">{item.ath_date}</p>
               </div>
             </div>
           )
