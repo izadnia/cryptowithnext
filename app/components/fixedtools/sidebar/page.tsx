@@ -39,7 +39,8 @@ function SideBar({ sideOpen }: any) {
   const handleTogglePin = () => {
     setIsSidebarPinned(!isSidebarPinned);
   };
-  console.log(segment[1])
+
+  
   return (
     <div
       className={` text-blue-200 bg-slate-700 bg-opacity-95  shadow-2xl min-h-full ${

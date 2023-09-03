@@ -56,32 +56,38 @@ function CartCoin() {
   }, []);
 
   return (
-    <div className=" flex flex-col p-2 m-2 md:flex-row ">
-      {coinData?.slice(0, 3).map((item: coinDataProps) => {
-        return (
-          <div key={item.id} className=" p-2 m-4  rounded-xl w-full md:w-1/3 shadow-xl duration-300 hover:scale-110 hover:bg-slate-400 hover:text-white ">
-            <div className="flex py-4 my-4">
-              <div className="m-auto">
-                {<Image alt={item.name} src={item.image} width={50} height={50} />}
+    <div className="w-full overflow-x-scroll overflow-y-hidden">
+      <div className="w-[1500px]  flex  p-2 m-2 ">
+        {coinData?.slice(0, 5).map((item: coinDataProps) => {
+          return (
+            <div key={item.id} className=" p-2 m-4 w-[250px] rounded-xl shadow-xl duration-300 hover:scale-110 hover:bg-slate-400 hover:text-white ">
+              <div className="flex py-4 my-4">
+                <div className="m-auto">
+                  {<Image alt={item.name} src={item.image} width={50} height={50} />}
+                </div>
+              </div>
+              <div className="flex py-4 my-4">
+                <p className="m-auto">{item.name}</p>
+              </div>
+              
+              <div className="flex pt-8 mb-8">
+                <p className="m-auto">Rank : {item.market_cap_rank}</p>
+              </div>
+              <div className="flex py-2 my-2">
+                <p className="m-auto">{item.current_price} $</p>
+              </div>
+              <div className="flex py-2 my-2">
+                <div className="m-auto">
+                  <GraphOfCoin coin={item.id} />
+                </div>
+              </div>
+              <div className="flex pt-8 mt-8">
+                <p className="m-auto">{item.ath_date}</p>
               </div>
             </div>
-            <div className="flex py-4 my-4">
-              <p className="m-auto">{item.name}</p>
-            </div>
-            <div className="flex py-2 my-2">
-              <p className="m-auto">{item.current_price} $</p>
-            </div>
-            <div className="flex py-2 my-2">
-              <div className="m-auto">
-                <GraphOfCoin />    
-              </div>
-            </div>
-            <div className="flex pt-8 mt-8">
-              <p className="m-auto">MORE ????</p>
-            </div>
-          </div>
-        )
-      })}
+          )
+        })}
+      </div>
     </div>
   );
 }
