@@ -43,7 +43,7 @@ function SideBar({ sideOpen }: any) {
   
   return (
     <div
-      className={` text-blue-200 bg-slate-700 bg-opacity-95  shadow-2xl min-h-full ${
+      className={`sticky top-20 text-blue-200 bg-slate-700 bg-opacity-95 rounded-r-xl shadow-2xl h-[88vh] ${
         isSidebarOpen ? "w-[320px] duration-300 p-4" : "w-0 duration-700"
       }`}
     >

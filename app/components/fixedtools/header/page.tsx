@@ -55,14 +55,14 @@ function Header() {
   };
 
   return (
-    <div className="flex justify-between w-[full] bg-stone-200 p-3">
+    <div className="flex fixed z-50 top-0 justify-between w-screen bg-stone-200 px-6 py-2">
       <button className="" onClick={handleToggleSidebar}>
         {isSidebarOpen ? <MenuClose /> : <MenuOpen />}
       </button>
 
-      <div>hi</div>
+      <div></div>
       <div>
-        <Image className="rounded-xl" width={170} height={24} alt={'loho'} src={'/images/logo.png'} />
+        <Image className="rounded-xl" width={130} height={24} alt={'loho'} src={'/images/logo.png'} />
       </div>
     </div>
   );

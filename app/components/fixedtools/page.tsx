@@ -24,6 +24,7 @@ function FixedTools({ children }: any) {
 
   return (
     <SidebarContext.Provider
+      
       value={{
         isSidebarOpen,
         setIsSidebarOpen,

@@ -23,8 +23,8 @@ export default function RootLayout({
         className={inter.className}
         style={{ direction: "ltr" }}
       >
-        <div className="w-[full] min-h-screen">
-          <FixedTools>
+        <div className="w-[full] relative min-h-screen">
+          <FixedTools className="">
             <div className="max-w-4xl m-auto">{children}</div> 
             <Footer />
           </FixedTools>
