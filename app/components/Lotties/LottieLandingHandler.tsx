@@ -2,7 +2,7 @@
 
 import React from "react";
 import Lottie from "lottie-react";
-import animationData from "./animationHub.json";
+import animationData from "./animationEarth.json";
 
 function LottieLandingHandler(animation:any) {
   return <Lottie loop animationData={animationData} />;

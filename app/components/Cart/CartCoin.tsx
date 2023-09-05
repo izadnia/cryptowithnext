@@ -80,16 +80,18 @@ function CartCoin() {
               direction="horizontal"
               className="List"
               height={height}
-              itemCount={data.slice(0,10).length}
+              itemCount={data.slice(0, 10).length}
               itemSize={280}
               width={width}
             >
               {({ index, style }: any) => (
                 <div key={index} style={style}>
-                  <div id="coin-Section"
+                  <div
+                    id="coin-Section"
                     key={data[index]?.id}
                     className="
-                        
+                        backdrop-blur-sm 
+                      bg-white/5
                         p-4 
                         m-2 
                         w-[240px] 
@@ -114,14 +116,16 @@ function CartCoin() {
                       width={50}
                       height={50}
                     />
-                    <p id="coin-name"
+                    <p
+                      id="coin-name"
                       className="
                         m-auto
                       "
                     >
                       {data[index]?.name}
                     </p>
-                    <p id="coinRank"
+                    <p
+                      id="coinRank"
                       className="
                         pt-2 
                         mb-2 
@@ -130,42 +134,51 @@ function CartCoin() {
                     >
                       Rank : {data[index]?.market_cap_rank}
                     </p>
-                    <p id="coin-price" 
+                    <p
+                      id="coin-price"
                       className="
                         text-xl
                         font-semibold
-                      ">
-                       {data[index]?.current_price} $
+                      "
+                    >
+                      {data[index]?.current_price} $
                     </p>
-                    <p id="coin-highest-24h" 
+                    <p
+                      id="coin-highest-24h"
                       className="
                         text-green-800
-                      ">
-                       + : {data[index]?.high_24h} $
+                      "
+                    >
+                      + : {data[index]?.high_24h} $
                     </p>
-                    <p id="coin-lowest-24h" 
+                    <p
+                      id="coin-lowest-24h"
                       className="
                         text-red-700
-                      ">
-                       - : {data[index]?.low_24h} $
+                      "
+                    >
+                      - : {data[index]?.low_24h} $
                     </p>
-                    <p id="coin-percentage-change" 
+                    <p
+                      id="coin-percentage-change"
                       className="
                         text-amber-900
-                      ">
-                       % : {data[index]?.price_change_percentage_24h}
+                      "
+                    >
+                      % : {data[index]?.price_change_percentage_24h}
                     </p>
-                    <p id="coin-symbol" 
+                    <p
+                      id="coin-symbol"
                       className="
                        text-xs
                        font-semibold
-                      ">
-                       {data[index]?.symbol}
+                      "
+                    >
+                      {data[index]?.symbol}
                     </p>
-                    <GraphOfCoin 
-                      coin={data[index]?.id} />
-                    </div>
+                    <GraphOfCoin coin={data[index]?.id} />
                   </div>
+                </div>
               )}
             </List>
           )}

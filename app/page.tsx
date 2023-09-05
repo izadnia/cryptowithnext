@@ -9,12 +9,31 @@ export default async function Home() {
   return (
     <div className="">
       <main className="p-4">
-        <div className="w-full flex flex-col md:flex-row">
-          <div className="md:w-1/2 ">
+        <div 
+        className="
+          w-full 
+          relative 
+          lg:h-80 
+          md:max-lg:h-[300px]
+          sm:max-md:h-[400px]
+          max-sm:h-[570px]
+          
+          ">
+          <div className="md:w-[800px] absolute ">
             <LottieLandingHandler />
           </div>
-          <div className=" md:w-1/2  shadow-2xl  rounded-b-[40px] pt-8 rounded-t-[40px]">
-            <p className="p-2 m-4 ">
+          <div 
+            className=" 
+              shadow-2xl 
+              absolute 
+              backdrop-blur-sm 
+              bg-white/0  
+              rounded-b-[40px] 
+              pt-8 
+              rounded-t-[40px]
+              
+              ">
+            <p className="p-2 m-4  ">
               <span className="text-bold text-2xl ">
                 Welcome to Iranian Crypto Hub
               </span>
@@ -35,7 +54,7 @@ export default async function Home() {
         <br />
         
         
-        <div className="w-[95%] h-[480px]">
+        <div className="w-[95%] h-[480px] ">
           {/* <Test /> */}
           <CartCoin />
         </div>
