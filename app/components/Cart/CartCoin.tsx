@@ -80,7 +80,7 @@ function CartCoin() {
               direction="horizontal"
               className="List"
               height={height}
-              itemCount={data.length}
+              itemCount={data.slice(0,10).length}
               itemSize={280}
               width={width}
             >
