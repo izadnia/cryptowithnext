@@ -72,9 +72,7 @@ function CartCoin() {
                   scrollSnapType: 'y',
                   scrollBehavior:'smooth',
                   scrollbarWidth:'thin',
-                  msScrollbarTrackColor:'gray',
-                  msScrollbarArrowColor:'darkgray',
-                  scrollbarColor:'grey',
+
                   
                   
                 }}
