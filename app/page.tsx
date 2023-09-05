@@ -35,7 +35,8 @@ export default async function Home() {
         <br />
         
         
-        <div>
+        <div className="w-full h-[650px]">
+          {/* <Test /> */}
           <CartCoin />
         </div>
         
