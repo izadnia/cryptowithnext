@@ -1,16 +1,13 @@
-
 import CartCoin from "./components/Cart/CartCoin";
-
 
 import LottieLandingHandler from "./components/Lotties/LottieLandingHandler";
 
 export default async function Home() {
-
   return (
     <div className="">
       <main className="p-4">
-        <div 
-        className="
+        <div
+          className="
           w-full 
           relative 
           lg:h-80 
@@ -18,27 +15,31 @@ export default async function Home() {
           sm:max-md:h-[400px]
           max-sm:h-[570px]
           
-          ">
-          <div 
+          "
+        >
+          <div
             className="
               md:w-[800px] 
               absolute 
               max-sm:hidden          
-              ">
+              "
+          >
             <LottieLandingHandler />
           </div>
-          <div 
-            className=" 
-              shadow-2xl 
+          <div
+            className="
               absolute 
               backdrop-blur-sm 
               bg-white/0  
               rounded-b-[40px] 
               pt-8 
-              rounded-t-[40px]
               max-sm:backdrop-blur-none
-          
-              ">
+              max-sm:rounded-xl 
+              max-sm:shadow-xl 
+             max-sm:shadow-blue-200
+             max-sm:border-sky-100
+              "
+          >
             <p className="p-2 m-4  ">
               <span className="text-bold text-2xl ">
                 Welcome to Iranian Crypto Hub
@@ -58,18 +59,15 @@ export default async function Home() {
           </div>
         </div>
         <br />
-        
-        
+
         <div className="w-[95%] h-[480px] ">
           {/* <Test /> */}
           <CartCoin />
         </div>
-        
-        
-        
-         <div>section 3 : investment plans</div>
+
+        <div>section 3 : investment plans</div>
         <div>section 4 : Blogs</div>
-        <div>section 5 : last blog post</div> 
+        <div>section 5 : last blog post</div>
       </main>
     </div>
   );
