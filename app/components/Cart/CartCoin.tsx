@@ -65,7 +65,7 @@ function CartCoin() {
     <>
       {loaded ? (
         <AutoSizer>
-          {({ height, width }: any) => (
+          {({ height, width, data }: any) => (
               <List
                 key={width}
                 style={{ 

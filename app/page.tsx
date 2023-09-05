@@ -3,7 +3,6 @@ import CartCoin from "./components/Cart/CartCoin";
 
 
 import LottieLandingHandler from "./components/Lotties/LottieLandingHandler";
-import Test from "./components/Test/test";
 
 export default async function Home() {
 
