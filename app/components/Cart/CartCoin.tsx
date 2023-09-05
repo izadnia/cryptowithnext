@@ -7,7 +7,7 @@ import AutoSizer from "react-virtualized-auto-sizer";
 import Image from "next/image";
 import GraphOfCoin from "../graph/GraphOfCoin";
 
-type coinDataProps = {
+type coinDataProps = [{
   id: string;
   symbol: string;
   name: string;
@@ -34,10 +34,10 @@ type coinDataProps = {
   atl_date: string;
   roi: null;
   last_updated: string;
-};
+}];
 
 function CartCoin() {
-  const [data, setData] = useState<Array<any> | undefined>([]);
+  const [data, setData] = useState<Array<coinDataProps> >([]);
   const [loaded, setloaded] = useState(false);
   async function getMarketWithAxios() {
     const options = {
@@ -65,8 +65,8 @@ function CartCoin() {
     <>
       {loaded ? (
         <AutoSizer>
-          {({ height, width, data }: any) => (
-              <List
+          {({ height, width}:any) => (
+              <List 
                 key={width}
                 style={{ 
                   scrollSnapType: 'y',
