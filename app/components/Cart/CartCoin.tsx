@@ -7,7 +7,7 @@ import AutoSizer from "react-virtualized-auto-sizer";
 import Image from "next/image";
 import GraphOfCoin from "../graph/GraphOfCoin";
 
-type coinDataProps = [{
+type coinDataProps = {
   id: string;
   symbol: string;
   name: string;
@@ -34,10 +34,10 @@ type coinDataProps = [{
   atl_date: string;
   roi: null;
   last_updated: string;
-}];
+};
 
 function CartCoin() {
-  const [data, setData] = useState<Array<coinDataProps> >([]);
+  const [data, setData] = useState<any |null>(null);
   const [loaded, setloaded] = useState(false);
   async function getMarketWithAxios() {
     const options = {
@@ -86,15 +86,15 @@ function CartCoin() {
                 {({ index, style }: any) => (
                   <div key={index} style={style}>
                     <div
-                      key={data[index].id}
+                      key={data[index]?.id}
                       className="mt-8 p-2 m-2 w-[240px] rounded-xl shadow-xl duration-300 hover:cursor-pointer hover:scale-110 hover:bg-slate-400 hover:text-white "
                     >
                       <div className="flex py-4 my-4">
                         <div className="m-auto">
                           {
                             <Image
-                              alt={data[index].name}
-                              src={data[index].image}
+                              alt={data[index]?.name}
+                              src={data[index]?.image}
                               width={50}
                               height={50}
                             />
@@ -102,20 +102,20 @@ function CartCoin() {
                         </div>
                       </div>
                       <div className="flex p-4 my-4">
-                        <p className="m-auto">{data[index].name}</p>
+                        <p className="m-auto">{data[index]?.name}</p>
                       </div>
 
                       <div className="flex pt-8 mb-8">
                         <p className="m-auto">
-                          Rank : {data[index].market_cap_rank}
+                          Rank : {data[index]?.market_cap_rank}
                         </p>
                       </div>
                       <div className="flex py-2 my-2">
-                        <p className="m-auto">{data[index].current_price} $</p>
+                        <p className="m-auto">{data[index]?.current_price} $</p>
                       </div>
                       <div className="flex py-2 my-2">
                         <div className="m-auto">
-                          <GraphOfCoin coin={data[index].id} />
+                          <GraphOfCoin coin={data[index]?.id} />
                         </div>
                       </div>
                       <div className="flex pt-8 mt-8">
