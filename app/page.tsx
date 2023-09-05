@@ -3,6 +3,7 @@ import CartCoin from "./components/Cart/CartCoin";
 
 
 import LottieLandingHandler from "./components/Lotties/LottieLandingHandler";
+import Test from "./components/Test/test";
 
 export default async function Home() {
 
@@ -35,7 +36,8 @@ export default async function Home() {
         <br />
         
         
-        <div>
+        <div className="w-full h-[650px]">
+          {/* <Test /> */}
           <CartCoin />
         </div>
         
