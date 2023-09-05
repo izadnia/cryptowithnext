@@ -19,7 +19,12 @@ export default async function Home() {
           max-sm:h-[570px]
           
           ">
-          <div className="md:w-[800px] absolute ">
+          <div 
+            className="
+              md:w-[800px] 
+              absolute 
+              max-sm:hidden          
+              ">
             <LottieLandingHandler />
           </div>
           <div 
@@ -31,7 +36,8 @@ export default async function Home() {
               rounded-b-[40px] 
               pt-8 
               rounded-t-[40px]
-              
+              max-sm:backdrop-blur-none
+          
               ">
             <p className="p-2 m-4  ">
               <span className="text-bold text-2xl ">

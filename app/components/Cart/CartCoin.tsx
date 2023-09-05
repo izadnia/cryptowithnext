@@ -108,6 +108,8 @@ function CartCoin() {
                         justify-around
                         flex
                         flex-col
+                        max-sm:backdrop-blur-none
+          
                         "
                   >
                     <Image
