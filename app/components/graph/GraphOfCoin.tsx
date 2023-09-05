@@ -1,11 +1,10 @@
 'use client'
 
 import { useEffect, useState } from "react";
-
 import { LineChart, Line, YAxis, ResponsiveContainer } from 'recharts';
-
 import { default as axios } from "axios";
-
+import animationData from "../Lotties/animationQRScan.json";
+import Lottie from "lottie-react";
 
 function GraphOfCoin(coinID: any) {
     const [transformedData, setTransformedData] = useState<any>([]);
@@ -26,6 +25,7 @@ function GraphOfCoin(coinID: any) {
 
         } catch (error) {
             console.error(error);
+            setLoaded(false)
         }
     }
 
@@ -52,7 +52,7 @@ function GraphOfCoin(coinID: any) {
     }, []);
 
     return (
-        <div className="w-[150px] h-[150px]">
+        <div className="w-[150px] h-[150px] p-4">
             {loaded ?
                 <ResponsiveContainer width="100%" height="100%">
                     <LineChart width={90} height={200} data={transformedData}>
@@ -60,7 +60,7 @@ function GraphOfCoin(coinID: any) {
                         <Line type="natural" dot={false} dataKey={'price'} stroke="#111" strokeWidth={2} />
                     </LineChart>
                 </ResponsiveContainer>
-                : <p>loading</p>}
+                : <Lottie loop animationData={animationData} />}
         </div>
 
 

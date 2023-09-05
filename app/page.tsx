@@ -35,14 +35,14 @@ export default async function Home() {
         <br />
         
         
-        <div className="w-full h-[650px]">
+        <div className="w-[95%] h-[450px]">
           {/* <Test /> */}
           <CartCoin />
         </div>
         
         
         
-        {/* <div>section 3 : investment plans</div>
+         <div>section 3 : investment plans</div>
         <div>section 4 : Blogs</div>
         <p className="">
           Welcome to IranianCryptoHub, your ultimate destination for
@@ -64,7 +64,7 @@ export default async function Home() {
           potential of digital currencies. Join our vibrant community and embark
           on an exciting journey into the world of cryptocurrencies.
         </p>
-        <div>section 5 : last blog post</div> */}
+        <div>section 5 : last blog post</div> 
       </main>
     </div>
   );
