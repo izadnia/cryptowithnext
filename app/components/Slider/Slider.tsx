@@ -3,31 +3,9 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "../../styles/Style.module.scss";
 import gsap from "gsap";
 import { setTimeout } from "timers";
-import { AccessibilityModifier } from "typescript";
 
 function Slider() {
-  const sliderdata = [
-    {
-      title: "I'm the first box",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-    },
-    {
-      title: "I'm the second box",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-    },
-    {
-      title: "I'm the third box",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-    },
-    {
-      title: "I'm the forth box",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-    },
-    {
-      title: "I'm the fifth box",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-    },
-  ];
+
 
   const [value, setValue] = useState(0);
   const [trailValue, setTrailValue] = useState(0);
