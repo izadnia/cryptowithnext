@@ -6,35 +6,35 @@ import { setTimeout } from "timers";
 
 function Slider() {
 
-
   const [value, setValue] = useState(0);
+  let interval = 6000;
+  let timeout:any;
 
-  const [trigger, setTrigger] = useState(true);
-  let interval = 4000;
-
-
-
-  function slide(condition: string, number: number) {
-    if (trigger) {
-      setTimeout(() => {
-        initiateINC(number);
+  function slide() {
+    clearInterval(timeout);
+    timeout = setInterval(() => {
+        value === 80 ? setValue(0) : setValue(value + 20);
         const tl = gsap.timeline({
           defaults: { duration: 1, ease: "power2.inOut" },
         });
         tl.from(".bg-slider", { x: "-100%", opacity: 0 })
-          .from(".p-slider", { opacity: 0 }, "-=0.3")
-          .from(".h-slider", { opacity: 0, y: "30px" }, "-=0.3");
-      }, interval);
-    }
-    setTrigger(false);
+          .from(".p-slider", { opacity: 0 }, "-=0.8")
+          .from(".h-slider", { opacity: 0, y: "30px" }, "-=0.1")
+          .fromTo(".button-slider",{opacity:0},{opacity:1},'-=0.1' );
+      }, interval);    
   }
 
-  function initiateINC(num: number) {
-    value === 80 ? setValue(0) : setValue(num + 20);
+  function clickCheck(e:number){
+    clearInterval(timeout);
+    setValue(e)
   }
 
   useEffect(() => {
-    slide("increase", value);
+
+    slide();
+    return () => {
+      clearInterval(timeout);
+    };
   }, [value]);
 
   return (
@@ -124,32 +124,30 @@ function Slider() {
 
         <div id="trail" className={styles.trail}>
           <div
-            onClick={() => {
-              setTrigger(false), setValue(0), setTrigger(true);
-            }}
+            onClick={() => clickCheck(0) }
             className={`${styles.box1} ${value === 0 ? styles.active : null}`}
           ></div>
           <div
             onClick={() => {
-              setTrigger(false), setValue(20), setTrigger(true);
+              clickCheck(20)
             }}
             className={`${styles.box2} ${value === 20 ? styles.active : null}`}
           ></div>
           <div
             onClick={() => {
-              setTrigger(false), setValue(40), setTrigger(true);
+              clickCheck(40)
             }}
             className={`${styles.box3} ${value === 40 ? styles.active : null}`}
           ></div>
           <div
             onClick={() => {
-              setTrigger(false), setValue(60), setTrigger(true);
+              clickCheck(60)
             }}
             className={`${styles.box4} ${value === 60 ? styles.active : null}`}
           ></div>
           <div
             onClick={() => {
-              setTrigger(false), setValue(80), setTrigger(true);
+              clickCheck(80)
             }}
             className={`${styles.box5} ${value === 80 ? styles.active : null}`}
           ></div>

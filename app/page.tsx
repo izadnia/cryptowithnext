@@ -62,16 +62,16 @@ export default async function Home() {
         </div>
         <br />
 
-        {/* <div className="w-[95%] h-[480px] ">
+        <div className="w-[95%] h-[480px] ">
          
           <CartCoin />
-        </div> */}
+        </div>
 
-        <div>section 3 : investment plans</div>
-        <div className="w-full">
+        {/* <div>section 3 : investment plans </div> */}
+        <div className="w-[95%] mt-4">
           <Slider   />
         </div>
-        <div>section 5 : last blog post</div>
+        {/* <div>section 5 : last blog post</div> */}
       </main>
     </div>
   );
