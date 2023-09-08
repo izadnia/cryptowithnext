@@ -8,37 +8,11 @@ function Slider() {
 
 
   const [value, setValue] = useState(0);
-  const [trailValue, setTrailValue] = useState(0);
+
   const [trigger, setTrigger] = useState(true);
   let interval = 4000;
 
-  function trailupdat(value: number, trailValue: number) {
-    if (value === 0) {
-      trailValue = 0;
-    } else if (value === 20) {
-      trailValue = 1;
-    } else if (value === 40) {
-      trailValue = 2;
-    } else if (value === 60) {
-      trailValue = 3;
-    } else {
-      trailValue = 4;
-    }
-  }
 
-  function trailupdate(value: number) {
-    if (value === 0) {
-      setTrailValue(0);
-    } else if (value === 20) {
-      setTrailValue(1);
-    } else if (value === 40) {
-      setTrailValue(2);
-    } else if (value === 60) {
-      setTrailValue(3);
-    } else {
-      setTrailValue(4);
-    }
-  }
 
   function slide(condition: string, number: number) {
     if (trigger) {
@@ -57,7 +31,6 @@ function Slider() {
 
   function initiateINC(num: number) {
     value === 80 ? setValue(0) : setValue(num + 20);
-    trailupdate(value);
   }
 
   useEffect(() => {
