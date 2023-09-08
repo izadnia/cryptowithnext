@@ -48,7 +48,7 @@ function Slider() {
           <div className={`${styles.box} ${styles.box1}`}>
             <div className={`${styles.bg} bg-slider`}></div>
             <div className={styles.details}>
-              <h1 className="h-slider">I'm the 1 Box</h1>
+              <h1 className="h-slider">I am the 1 Box</h1>
               <p className="p-slider">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
                 lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
@@ -63,7 +63,7 @@ function Slider() {
           <div className={`${styles.box} ${styles.box2}`}>
             <div className={`${styles.bg} bg-slider`}></div>
             <div className={styles.details}>
-              <h1 className="h-slider">I'm the 2 Box</h1>
+              <h1 className="h-slider">I am the 2 Box</h1>
               <p className="p-slider">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
                 lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
@@ -78,7 +78,7 @@ function Slider() {
           <div className={`${styles.box} ${styles.box3}`}>
             <div className={`${styles.bg} bg-slider`}></div>
             <div className={styles.details}>
-              <h1 className="h-slider">I'm the 3 Box</h1>
+              <h1 className="h-slider">I am the 3 Box</h1>
               <p className="p-slider">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
                 lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
@@ -93,7 +93,7 @@ function Slider() {
           <div className={`${styles.box} ${styles.box4}`}>
             <div className={`${styles.bg} bg-slider`}></div>
             <div className={styles.details}>
-              <h1 className="h-slider">I'm the 4 Box</h1>
+              <h1 className="h-slider">I am the 4 Box</h1>
               <p className="p-slider">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
                 lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
@@ -108,7 +108,7 @@ function Slider() {
           <div className={`${styles.box} ${styles.box5}`}>
             <div className={`${styles.bg} bg-slider`}></div>
             <div className={styles.details}>
-              <h1 className="h-slider">I'm the 5 Box</h1>
+              <h1 className="h-slider">I am the 5 Box</h1>
               <p className="p-slider">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
                 lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
