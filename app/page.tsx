@@ -1,8 +1,10 @@
 import CartCoin from "./components/Cart/CartCoin";
 
 import LottieLandingHandler from "./components/Lotties/LottieLandingHandler";
+import Slider from "./components/Slider/Slider";
 
 export default async function Home() {
+  
   return (
     <div className="">
       <main className="p-4">
@@ -60,13 +62,15 @@ export default async function Home() {
         </div>
         <br />
 
-        <div className="w-[95%] h-[480px] ">
-          {/* <Test /> */}
+        {/* <div className="w-[95%] h-[480px] ">
+         
           <CartCoin />
-        </div>
+        </div> */}
 
         <div>section 3 : investment plans</div>
-        <div>section 4 : Blogs</div>
+        <div className="w-full">
+          <Slider   />
+        </div>
         <div>section 5 : last blog post</div>
       </main>
     </div>
