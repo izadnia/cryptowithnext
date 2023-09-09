@@ -51,7 +51,7 @@ function Slider() {
         >
           {
           news.map((item,index=0)=>(
-            <div className={`${styles.box} ${styles.box1}`}>
+            <div key={item.src} className={`${styles.box} ${styles.box1}`}>
             <div className={`${styles.bg} bg-slider`}></div>
             <div className={styles.details}>
               <h1 className="h-slider">{item.title}</h1>
