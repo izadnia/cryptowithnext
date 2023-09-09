@@ -42,7 +42,7 @@ type coinDataProps = {
   last_updated: string;
 };
 
-function CartCoin() {
+function CardCoin() {
   const [data, setData] = useState<any | null>(null);
   const [loaded, setloaded] = useState(false);
   async function getMarketWithAxios() {
@@ -195,4 +195,4 @@ function CartCoin() {
   );
 }
 
-export default CartCoin;
+export default CardCoin;
