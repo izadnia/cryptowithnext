@@ -187,7 +187,7 @@ function CardCoin() {
         </AutoSizer>
       ) : (
         <div>
-          <h1>Get to know about Market </h1>
+          <h1>Get to know about The Market </h1>
           <p>click here</p>
         </div>
       )}

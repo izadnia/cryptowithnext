@@ -12,7 +12,7 @@ $b5cl: #ffffff;
 $black: #000;
 $button: rgb(41, 41, 41);
 $contex: #242424;
-$title : #0c0c0c;
+$title: #0c0c0c;
 ////////// Mixin
 
 // Generate different colors for slides
@@ -20,6 +20,7 @@ $title : #0c0c0c;
   background-color: $DC;
   .illustration .inner {
     background-color: $LC;
+
     &::after,
     &::before {
       background-color: rgba($LC, 0.3);
@@ -136,35 +137,41 @@ $title : #0c0c0c;
         grid-column: 1 / -1;
         text-align: center;
         padding: 2rem;
-     
+        margin-top: 2rem;
         transform: translateY(-2rem);
       }
 
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 500;
         margin-bottom: 0.5rem;
         color: $title;
+        @media only screen and (max-width: 650px) {
+          font-size: 0.8rem;
+        }
       }
 
       p {
         display: inline-block;
-        font-size: 1rem;
+        font-size: 0.8rem;
         color: $contex;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         margin-right: 5rem;
-        
 
         @media only screen and (max-width: 800px) {
           margin-bottom: 1rem;
           margin-right: 0;
         }
+        @media only screen and (max-width: 650px) {
+          font-size: 0.65rem;
+          margin-bottom: 0.5rem;
+        }
       }
 
       button {
-        padding: 1rem 2rem;
+        padding: 0.5rem 1rem;
         color: $button;
-        border-radius: 2rem;
+        border-radius: 0.5rem;
         outline: none;
         border: none;
         cursor: pointer;
@@ -182,6 +189,11 @@ $title : #0c0c0c;
         @media only screen and (max-width: 800px) {
           padding: 0.5rem 1rem;
         }
+        @media only screen and (max-width: 650px) {
+          font-size: 0.65rem;
+          padding: 0.4rem 0.7rem;
+        }
+        
       }
     }
   }
@@ -217,40 +229,33 @@ $title : #0c0c0c;
     }
 
     div {
-        
       height: 15rem;
-      width: 10rem;
+      width: 22rem;
       border-radius: 1rem;
       background-color: $b1cl;
       position: relative;
       transform: skewX(-10deg);
-
+      -webkit-box-shadow: 0px 10px 13px -7px #000000,
+        15px -15px 0px 0px rgba(0, 0, 0, 0);
+      box-shadow: 0px 10px 13px -7px #000000,
+        15px -15px 0px 0px rgba(0, 0, 0, 0);
+        overflow-y: hidden;
+        overflow-x: hidden;
       @media only screen and (max-width: 800px) {
+        height: 16rem;
+        width: 15rem;
+        border-radius: 1rem;
+      }
+      @media only screen and (max-width: 650px) {
         height: 10rem;
-        width: 8rem;
+        width: 12rem;
         border-radius: 1rem;
       }
-
-      &::after,
-      &::before {
-        content: "";
-        position: absolute;
-        height: 100%;
+      img {
         width: 100%;
-        border-radius: 1rem;
-        top: 0;
-        left: 0; 
-        @media only screen and (max-width: 800px) {
-        border-radius: 1rem;
-      }
+        height: 100%;
+        object-fit: cover;
 
-      }
-     
-      &::after {
-        transform: translate(1rem, -0.5rem);
-      }
-      &::before {
-        transform: translate(0.5rem, -1rem);
       }
     }
   }
@@ -291,7 +296,6 @@ $title : #0c0c0c;
 }
 
 .trail {
-  
   bottom: 0%;
   left: 50%;
   transform: translateX(-50%);

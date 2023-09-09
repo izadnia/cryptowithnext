@@ -2,14 +2,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../../styles/Style.module.scss";
 import gsap from "gsap";
-import { setTimeout } from "timers";
+import { news } from "./news";
+import Image from "next/image";
 
 function Slider() {
 
   const [value, setValue] = useState(0);
   let interval = 6000;
   let timeout:any;
-
+  
   function slide() {
     clearInterval(timeout);
     timeout = setInterval(() => {
@@ -28,6 +29,9 @@ function Slider() {
     clearInterval(timeout);
     setValue(e)
   }
+  function styleDetection(number:number){
+    return `styles.box${number}`
+  }
 
   useEffect(() => {
 
@@ -45,81 +49,29 @@ function Slider() {
           style={{ translate: `-${value}%` }}
           className={styles.slider}
         >
-          <div className={`${styles.box} ${styles.box1}`}>
+          {
+          news.map((item,index=0)=>(
+            <div className={`${styles.box} ${styles.box1}`}>
             <div className={`${styles.bg} bg-slider`}></div>
             <div className={styles.details}>
-              <h1 className="h-slider">I am the 1 Box</h1>
+              <h1 className="h-slider">{item.title}</h1>
               <p className="p-slider">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
-                pellentesque eget.
+              
+                {item.contex}
+                <br/>
+                <span className="text-gray-600 italic">{item.author}</span>
               </p>
-              <button className="button-slider">Check Now1</button>
+              <button className="button-slider">More on {item.publisher}</button>
             </div>
             <div className={styles.illustration}>
-              <div className={styles.inner}></div>
+              <div className={styles.inner}>
+                < img className="z-50" src={item.image}  />
+              </div>
             </div>
           </div>
-          <div className={`${styles.box} ${styles.box2}`}>
-            <div className={`${styles.bg} bg-slider`}></div>
-            <div className={styles.details}>
-              <h1 className="h-slider">I am the 2 Box</h1>
-              <p className="p-slider">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
-                pellentesque eget.
-              </p>
-              <button className="button-slider">Check Now2</button>
-            </div>
-            <div className={styles.illustration}>
-              <div className={styles.inner}></div>
-            </div>
-          </div>
-          <div className={`${styles.box} ${styles.box3}`}>
-            <div className={`${styles.bg} bg-slider`}></div>
-            <div className={styles.details}>
-              <h1 className="h-slider">I am the 3 Box</h1>
-              <p className="p-slider">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
-                pellentesque eget.
-              </p>
-              <button className="button-slider">Check Now3</button>
-            </div>
-            <div className={styles.illustration}>
-              <div className={styles.inner}></div>
-            </div>
-          </div>
-          <div className={`${styles.box} ${styles.box4}`}>
-            <div className={`${styles.bg} bg-slider`}></div>
-            <div className={styles.details}>
-              <h1 className="h-slider">I am the 4 Box</h1>
-              <p className="p-slider">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
-                pellentesque eget.
-              </p>
-              <button className="button-slider">Check Now4</button>
-            </div>
-            <div className={styles.illustration}>
-              <div className={styles.inner}></div>
-            </div>
-          </div>
-          <div className={`${styles.box} ${styles.box5}`}>
-            <div className={`${styles.bg} bg-slider`}></div>
-            <div className={styles.details}>
-              <h1 className="h-slider">I am the 5 Box</h1>
-              <p className="p-slider">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                lacinia dui lectus. Donec scelerisque ipsum diam, ac mattis orci
-                pellentesque eget.
-              </p>
-              <button className="button-slider">Check Now5</button>
-            </div>
-            <div className={styles.illustration}>
-              <div className={styles.inner}></div>
-            </div>
-          </div>
+          ))
+}
+
         </div>
 
         <div id="trail" className={styles.trail}>
@@ -153,8 +105,7 @@ function Slider() {
           ></div>
         </div>
       </div>
-    </div>
-  );
+    </div>)
 }
 
 export default Slider;

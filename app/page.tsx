@@ -4,7 +4,6 @@ import LottieLandingHandler from "./components/Lotties/LottieLandingHandler";
 import Slider from "./components/Slider/Slider";
 
 export default async function Home() {
-  
   return (
     <div className="">
       <main className="p-4">
@@ -61,15 +60,15 @@ export default async function Home() {
           </div>
         </div>
         <br />
-
+        <h1 className=" text-3xl my-4">Worlds Top Ranking Coins:</h1>
         <div className="w-[95%] h-[480px] ">
-         
           <CardCoin />
         </div>
 
         {/* <div>section 3 : investment plans </div> */}
-        <div className="w-[95%] mt-4">
-          <Slider   />
+        <div className="w-[95%] mt-8">
+          <h1 className=" text-3xl my-4">Worlds Latest News:</h1>
+          <Slider />
         </div>
         {/* <div>section 5 : last blog post</div> */}
       </main>
