@@ -54,12 +54,24 @@ function GraphOfCoin(coinID: any) {
     return (
         <div className="w-[150px] h-[150px] p-4">
             {loaded ?
+                <>
                 <ResponsiveContainer width="100%" height="100%">
                     <LineChart width={90} height={200} data={transformedData}>
                         <YAxis axisLine={false} tick={{ fill: 'green', fontSize: 12 }} type="number" domain={[min, max]} />
                         <Line type="natural" dot={false} dataKey={'price'} stroke="#111" strokeWidth={2} />
                     </LineChart>
+                    
                 </ResponsiveContainer>
+                <p
+                id="coin-symbol"
+                className="
+                 text-xs
+                 flex
+                 justify-center
+                "
+              >
+                   in last 30 days
+              </p></>
                 : <Lottie loop animationData={animationData} />}
         </div>
 
