@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:wght@400;700&display=swap");
+
+$primary-color: #180148;
+$secondary-color: #31237c;
+$light-color: #fbfbfb;
+$dark-color: #272727;
+$accent-color: indianred;
+$details-color: #858585;
+
+.card {
+  padding-top: 1rem;
+  width: 250px;
+  height: 400px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: relative;
+  perspective: 1000px;
+  transform: perspective(1000px) translateY(0);
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+  border-radius: 2rem;
+  @media only screen and (max-width: 570px) {
+    width: 300px;
+  }
+  @media only screen and (max-width: 500px) {
+    width: 90%;
+  }
+
+  &.dark {
+    background-color: $secondary-color;
+    color: $light-color;
+
+    .purchaseButton {
+      border: 1px solid $accent-color;
+    }
+  }
+
+  &.light {
+    background-color: $light-color;
+    color: $dark-color;
+
+    .purchaseButton {
+      border: 1px solid $accent-color;
+    }
+  }
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+  .cardWrapper {
+    margin: 0.5rem;
+    &:hover {
+      .card {
+        transform: rotateY(179deg);
+        z-index: 2;
+        .textOverlay {
+          opacity: 0;
+          transform-style: preserve-3d;
+          z-index: 1;
+        }
+        .purchaseButtonContainer {
+          opacity: 1;
+        }
+      }
+    }
+    .textOverlay {
+      transform: perspective(1000px) translateY(0) translateZ(80px);
+      transition: transform 0.7s ease-in-out, opacity 1s ease;
+      pointer-events: none;
+      width: 100%;
+      perspective: inherit;
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-size: small;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+        font-weight: 700;
+      }
+      .oldPrice {
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: line-through;
+        margin: 1px;
+      }
+      .light {
+        color: rgb(146, 0, 0);
+      }
+      .dark {
+        color: rgb(255, 164, 164);
+      }
+      .price {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 900;
+        margin: 2px;
+      }
+      .detailsText {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px 10px;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        color: $details-color;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+.purchaseButtonContainer {
+  color: $accent-color;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  transform: perspective(1000px) rotateY(179deg) translateY(0) translateZ(80px);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.8s ease-in-out, opacity 1s ease;
+  width: 100%;
+  height: 100%;
+
+  .purchaseButton {
+    padding: 10px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    cursor: pointer;
+  }
+
+  .light:hover {
+    background-color: $accent-color;
+    color: $light-color;
+  }
+
+  .dark:hover {
+    background-color: $accent-color;
+    color: $dark-color;
+  }
+}
+
+.faSolid {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.backH2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
