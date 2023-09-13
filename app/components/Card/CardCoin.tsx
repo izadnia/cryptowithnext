@@ -68,28 +68,29 @@ function CardCoin() {
   return (
     <>
       {loaded ? (
-        <AutoSizer>
-          {({ height, width }: any) => (
-            <List
-              key={width}
-              style={{
-                scrollSnapType: "y",
-                scrollBehavior: "smooth",
-                scrollbarWidth: "thin",
-              }}
-              direction="horizontal"
-              className="List"
-              height={height}
-              itemCount={data.slice(0, 10).length}
-              itemSize={280}
-              width={width}
-            >
-              {({ index, style }: any) => (
-                <div key={index} style={style}>
-                  <div
-                    id="coin-Section"
-                    key={data[index]?.id}
-                    className="
+        <div className="h-[480px]">
+          <AutoSizer>
+            {({ height, width }: any) => (
+              <List
+                key={width}
+                style={{
+                  scrollSnapType: "y",
+                  scrollBehavior: "smooth",
+                  scrollbarWidth: "thin",
+                }}
+                direction="horizontal"
+                className="List"
+                height={height}
+                itemCount={data.slice(0, 10).length}
+                itemSize={280}
+                width={width}
+              >
+                {({ index, style }: any) => (
+                  <div key={index} style={style}>
+                    <div
+                      id="coin-Section"
+                      key={data[index]?.id}
+                      className="
                         backdrop-blur-sm 
                       bg-white/5
                         p-4 
@@ -111,80 +112,81 @@ function CardCoin() {
                         max-sm:backdrop-blur-none
           
                         "
-                  >
-                    <Image
-                      alt={data[index]?.name}
-                      src={data[index]?.image}
-                      width={50}
-                      height={50}
-                    />
-                    <p
-                      id="coin-name"
-                      className="
+                    >
+                      <Image
+                        alt={data[index]?.name}
+                        src={data[index]?.image}
+                        width={50}
+                        height={50}
+                      />
+                      <p
+                        id="coin-name"
+                        className="
                         m-auto
                       "
-                    >
-                      {data[index]?.name}
-                    </p>
-                    <p
-                      id="coinRank"
-                      className="
+                      >
+                        {data[index]?.name}
+                      </p>
+                      <p
+                        id="coinRank"
+                        className="
                         pt-2 
                         mb-2 
                         text-sky-800
                     "
-                    >
-                      Rank : {data[index]?.market_cap_rank}
-                    </p>
-                    <p
-                      id="coin-price"
-                      className="
+                      >
+                        Rank : {data[index]?.market_cap_rank}
+                      </p>
+                      <p
+                        id="coin-price"
+                        className="
                         text-xl
                         font-semibold
                       "
-                    >
-                      {data[index]?.current_price} $
-                    </p>
-                    <p
-                      id="coin-highest-24h"
-                      className="
+                      >
+                        {data[index]?.current_price} $
+                      </p>
+                      <p
+                        id="coin-highest-24h"
+                        className="
                         text-green-800
                       "
-                    >
-                      + : {data[index]?.high_24h} $
-                    </p>
-                    <p
-                      id="coin-lowest-24h"
-                      className="
+                      >
+                        + : {data[index]?.high_24h} $
+                      </p>
+                      <p
+                        id="coin-lowest-24h"
+                        className="
                         text-red-700
                       "
-                    >
-                      - : {data[index]?.low_24h} $
-                    </p>
-                    <p
-                      id="coin-percentage-change"
-                      className="
+                      >
+                        - : {data[index]?.low_24h} $
+                      </p>
+                      <p
+                        id="coin-percentage-change"
+                        className="
                         text-amber-900
                       "
-                    >
-                      % : {data[index]?.price_change_percentage_24h}
-                    </p>
-                    <p
-                      id="coin-symbol"
-                      className="
+                      >
+                        % : {data[index]?.price_change_percentage_24h}
+                      </p>
+                      <p
+                        id="coin-symbol"
+                        className="
                        text-xs
                        font-semibold
                       "
-                    >
-                      {data[index]?.symbol}
-                    </p>
-                    <GraphOfCoin coin={data[index]?.id} />
+                      >
+                        {data[index]?.symbol}
+                      </p>
+                      <GraphOfCoin coin={data[index]?.id} />
+                    </div>
                   </div>
-                </div>
-              )}
-            </List>
-          )}
-        </AutoSizer>
+                )}
+              </List>
+            )}
+          </AutoSizer>
+        </div>
       ) : (
         <div>
           <h1>Get to know about The Market </h1>
