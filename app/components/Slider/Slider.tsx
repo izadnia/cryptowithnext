@@ -1,9 +1,9 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+
+import { useEffect, useState } from "react";
 import styles from "./Style.module.scss";
 import gsap from "gsap";
-import { news } from "./news";
-import Image from "next/image";
+import { news } from "../../utils/news";
 
 function Slider() {
 

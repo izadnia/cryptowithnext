@@ -1,0 +1,47 @@
+export const plans =[
+    {
+      color: "light",
+      title: "Basic",
+      price: "25",
+      priceType: String,
+      description: [
+        "Access to IRC Dashboard",
+        "Notify with All importants",
+        "24h Online Support",
+        "Ultimate access to the News",
+        "1-month of free shared Agent",
+      ],
+      icon: String,
+      link: String,
+    },
+    {
+      color: "Dark",
+      title: "Professional",
+      price: "45",
+      priceType: String,
+      description: [
+        "Includes Basic +",
+        "Shared Agent for seeding",
+        "Access to the Articles Bank",
+        "AI Based analyzer",
+        "3-month of Free VIP Agent",
+      ],
+      icon: String,
+      link: String,
+    },
+    {
+      color: "light",
+      title: "Advanced",
+      price: "135",
+      priceType: String,
+      description: [
+        "Includes Professional +",
+        "VIP Agent",
+        "VIP Markets news",
+        "VIP Artificial OFFICE",
+        "VIP Access to Bloomberg",
+      ],
+      icon: String,
+      link: String,
+    },
+  ]
