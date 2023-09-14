@@ -23,22 +23,20 @@ function Nav() {
             </div>
           </Link>
         ) : null}
-        {segment.map((item) => {
-          if (item != "Pages") {
+        {segment.map((item, index) => {
+          if (item !== "Pages") {
+            const isLastItem = index === segment.length - 1;
+            const itemClassName = `
+                                    px-4
+                                    py-2 
+                                    bg-sky-700 
+                                    text-slate-50 
+                                    ${isLastItem ? "rounded-r-xl" : ""}
+                                    hover:bg-sky-500
+                                  `;
             return (
               <Link key={item} href={"/Pages/" + item}>
-                <div
-                  className="
-                    px-4
-                    py-2 
-                    bg-sky-700 
-                    text-slate-50 
-                    rounded-r-xl 
-                    hover:bg-sky-500
-                    "
-                >
-                  {item}
-                </div>
+                <div className={itemClassName}>{item}</div>
               </Link>
             );
           }
