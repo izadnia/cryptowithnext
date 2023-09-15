@@ -4,38 +4,41 @@ import { useSelectedLayoutSegments } from "next/navigation";
 
 function Nav() {
   const segment = useSelectedLayoutSegments();
+  console.log(segment);
   return (
     <div className="flex p-4 justify-around">
       <div className="flex justify-start">
-        {segment.length != 0 ? (
-          <Link href={"/"}>
+        {segment.length !== 0 && (
+          <Link href="/">
             <div
               className={`
-              px-4 
-              py-2 
-              bg-zinc-500 
-              text-slate-50 
-              rounded-l-xl 
-              hover:bg-sky-500
-              `}
+          px-4 
+          py-2 
+          bg-zinc-500 
+          text-slate-50 
+          rounded-l-xl 
+          hover:bg-sky-500
+        `}
             >
               Home
             </div>
           </Link>
-        ) : null}
+        )}
         {segment.map((item, index) => {
           if (item !== "Pages") {
             const isLastItem = index === segment.length - 1;
             const itemClassName = `
-                                    px-4
-                                    py-2 
-                                    bg-sky-700 
-                                    text-slate-50 
-                                    ${isLastItem ? "rounded-r-xl" : ""}
-                                    hover:bg-sky-500
-                                  `;
+        px-4
+        py-2 
+        bg-sky-700 
+        text-slate-50 
+        ${isLastItem ? "rounded-r-xl" : ""}
+        hover:bg-sky-500
+      `;
+            const itemPath = "/Pages/" + segment.slice(1, index + 1).join("/");
+
             return (
-              <Link key={item} href={"/Pages/" + item}>
+              <Link key={item} href={itemPath}>
                 <div className={itemClassName}>{item}</div>
               </Link>
             );
