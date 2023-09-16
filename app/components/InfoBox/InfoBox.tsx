@@ -44,6 +44,7 @@ function InfoBox({
           }
         }}
       >
+        <div className="text-white sticky border-2 border-white rounded-md w-16 p-1" onClick={()=>setShowInfo(false)}>CLOSE</div>
         {renderInformationLines()}
       </div>
       <div
