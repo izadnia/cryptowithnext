@@ -3,8 +3,8 @@ export default function ContainerComponents({
   titleSize,
   children,
 }: {
-  title: string;
-  titleSize: string;
+  title?: string;
+  titleSize?: string;
   children: React.ReactNode;
 }) {
   return (

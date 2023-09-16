@@ -2,9 +2,9 @@ import InfoBox from "@/app/components/InfoBox/InfoBox";
 import React from "react";
 
 
-function TableHeadTile({children}:{children:React.ReactNode}){
+function TableHeadTile({style,children}:{style?:string;children:React.ReactNode}){
   return(
-    <th className="p-2 items-center border-[1px] hover:bg-neutral-200 border-slate-300">
+    <th className={`p-2 items-center border-[1px] hover:bg-neutral-200 border-slate-300 ${style}`}>
       {children}
     </th>
   )
@@ -16,7 +16,7 @@ export default function TableHeader({ data }: { data?: string }) {
     return null;
   } else if (data == "symbol") {
     return (
-      <TableHeadTile>
+      <TableHeadTile  style="bg-blue-200">
         <InfoBox information="Coin Symbol" />
         <br />
         Sym
@@ -35,7 +35,7 @@ export default function TableHeader({ data }: { data?: string }) {
     return null;
   } else if (data == "current_price") {
     return (
-      <TableHeadTile>
+      <TableHeadTile  style="bg-blue-200">
         <InfoBox
         style="w-72"
         information={`The price of Bitcoin (BTC) is calculated in real-time by aggregating the latest data across 219 exchanges and 5160 markets, using a global volume-weighted average formula..\n\nCurrent Prices all in USD $`} />
@@ -58,7 +58,7 @@ export default function TableHeader({ data }: { data?: string }) {
     );
   } else if (data == "market_cap_rank") {
     return (
-      <TableHeadTile>
+      <TableHeadTile  style="bg-blue-200">
         <br />
         Rank
       </TableHeadTile>
@@ -164,15 +164,112 @@ export default function TableHeader({ data }: { data?: string }) {
       </TableHeadTile>
 
     );
-  }
-   
-  
-  
-  
-  
-  
-  
-  else {
-    return <TableHeadTile>hi</TableHeadTile>;
+  } else if (data == "total_supply") {
+    return (
+      <TableHeadTile>
+        <InfoBox
+          style="w-72"
+          information={`The amount of coins that have already been created, minus any coins that have been burned (removed from circulation). It is comparable to outstanding shares in the stock market.\n\nTotal Supply = \n Onchain supply - burned tokens`}
+        />
+        <br />
+        Total Supply
+      </TableHeadTile>
+
+    );
+  } else if (data == "max_supply") {
+    return (
+      <TableHeadTile>
+        <InfoBox
+          style="w-72"
+          information={`The maximum number of coins coded to exist in the lifetime of the cryptocurrency. It is comparable to the maximum number of issuable shares in the stock market.\nMax Supply =\n Theoretical maximum as coded`}
+        />
+        <br />
+        Max Supply
+      </TableHeadTile>
+
+    );
+  } else if (data == "ath") {
+    return (
+      <TableHeadTile style="bg-green-400">
+        <InfoBox
+          
+          information={`All Time Hight`}
+        />
+        <br />
+        ATH
+      </TableHeadTile>
+
+    );
+  } else if (data == "ath_change_percentage") {
+    return (
+      <TableHeadTile style="bg-green-300">
+        <InfoBox
+          style="w-64"
+          information={`All Time Highest Change Percentage`}
+        />
+        <br />
+        ATHC%
+      </TableHeadTile>
+
+    );
+  } else if (data == "ath_date") {
+    return (
+      <TableHeadTile style="bg-green-200">
+        <InfoBox
+          style="w-64"
+          information={`All Time High Date`}
+        />
+        <br />
+        ATHD
+      </TableHeadTile>
+
+    );
+  } else if (data == "atl") {
+    return (
+      <TableHeadTile style="bg-red-400" >
+        <InfoBox
+          style="w-64"
+          information={`All Time Low`}
+        />
+        <br />
+        ATL
+      </TableHeadTile>
+
+    );
+  } else if (data == "atl_change_percentage") {
+    return (
+      <TableHeadTile style="bg-red-300" >
+        <InfoBox
+          style="w-64"
+          information={`All Time Lowest Change Percentage`}
+        />
+        <br />
+        ATLC%
+      </TableHeadTile>
+
+    );
+  } else if (data == "atl_date") {
+    return (
+      <TableHeadTile style="bg-red-200" >
+        <InfoBox
+          style="w-64"
+          information={`All Time High Date`}
+        />
+        <br />
+        ATHD
+      </TableHeadTile>
+
+    );
+  } else if (data == "last_updated") {
+    return (
+      <TableHeadTile style="bg-lime-200" >
+        
+        <br />
+        Updated At
+      </TableHeadTile>
+
+    );
+  } else {
+    return null;
   }
 }
