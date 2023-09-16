@@ -7,22 +7,23 @@ function TableOfCoins() {
   const tableHeaders = Object.keys(coins[0]);
 
   return (
-    <table className=" w-full border-collapse border border-slate-400 ">
-      <thead className="">
-        <tr className="m-4">
-          <th>
-          </th>
-          {tableHeaders.map((key) => (
-            <TableHeader key={key} data={key} />
+    <div className="h-[28rem] overflow-scroll">
+      <table className="relative w-full border border-slate-400 ">
+        <thead className="w-full sticky bg-white -top-1">
+          <tr className="">
+            <th className={`p-1 items-center  hover:bg-neutral-200`}><br/>Avatar</th>
+            {tableHeaders.map((key) => (
+              <TableHeader key={key} data={key} />
+            ))}
+          </tr>
+        </thead>
+        <tbody className="w-full">
+          {coins.map((coin) => (
+            <TableBody key={coin.symbol} coin={coin} />
           ))}
-        </tr>
-      </thead>
-      <tbody>
-        {coins.map((coin) => (
-          <TableBody key={coin.symbol} coin={coin} />
-        ))}
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    </div>
   );
 }
 

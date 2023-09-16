@@ -7,7 +7,7 @@ import TableOfCoins from "./Table/TableOfCoins";
 function CoinMarket() {
 
   return (
-    <ContainerComponents  title="coin">
+    <ContainerComponents  title="">
       <TableOfCoins />
     </ContainerComponents>
   );

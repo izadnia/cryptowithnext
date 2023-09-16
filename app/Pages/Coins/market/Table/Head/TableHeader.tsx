@@ -4,7 +4,7 @@ import React from "react";
 
 function TableHeadTile({style,children}:{style?:string;children:React.ReactNode}){
   return(
-    <th className={`p-2 items-center border-[1px] hover:bg-neutral-200 border-slate-300 ${style}`}>
+    <th className={`p-1 items-center  hover:bg-neutral-200  ${style}`}>
       {children}
     </th>
   )
@@ -16,7 +16,7 @@ export default function TableHeader({ data }: { data?: string }) {
     return null;
   } else if (data == "symbol") {
     return (
-      <TableHeadTile  style="bg-blue-200">
+      <TableHeadTile>
         <InfoBox information="Coin Symbol" />
         <br />
         Sym
@@ -35,7 +35,7 @@ export default function TableHeader({ data }: { data?: string }) {
     return null;
   } else if (data == "current_price") {
     return (
-      <TableHeadTile  style="bg-blue-200">
+      <TableHeadTile  style=" rounded-xl bg-blue-100">
         <InfoBox
         style="w-72"
         information={`The price of Bitcoin (BTC) is calculated in real-time by aggregating the latest data across 219 exchanges and 5160 markets, using a global volume-weighted average formula..\n\nCurrent Prices all in USD $`} />
@@ -58,7 +58,7 @@ export default function TableHeader({ data }: { data?: string }) {
     );
   } else if (data == "market_cap_rank") {
     return (
-      <TableHeadTile  style="bg-blue-200">
+      <TableHeadTile>
         <br />
         Rank
       </TableHeadTile>
