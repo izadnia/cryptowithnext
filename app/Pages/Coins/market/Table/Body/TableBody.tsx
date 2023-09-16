@@ -34,8 +34,8 @@ interface CoinProps {
 function TableBody({ coin }: { coin: CoinProps }) {
   return (
     <tr>
-      <TableDetail image={true} text={coin.image} TWstyle=" w-full sticky bg-slate-400 -left-1 top-14" >{null}</TableDetail>
-      <TableDetail TWstyle="sticky bg-white left-14 top-14 rounded-r-2xl bg-slate-400">{coin.symbol}</TableDetail>
+      <TableDetail image={true} text={coin.image} TWstyle=" w-full sticky -left-1 top-14" >{null}</TableDetail>
+      <TableDetail TWstyle="sticky bg-white left-14 top-14 rounded-r-2xl ">{coin.symbol}</TableDetail>
       <TableDetail>{coin.name}</TableDetail>
       <TableDetail>{coin.current_price}</TableDetail>
       <TableDetail>{coin.market_cap}</TableDetail>
