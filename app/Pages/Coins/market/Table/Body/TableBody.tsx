@@ -33,10 +33,9 @@ interface CoinProps {
 function TableBody({ coin }: { coin: CoinProps }) {
   return (
     <tr>
-      <TableDetail>{coin.id}</TableDetail>
+      <TableDetail>{coin.symbol}</TableDetail>
       <TableDetail>{coin.symbol}</TableDetail>
       <TableDetail>{coin.name}</TableDetail>
-      <TableDetail>{coin.symbol}</TableDetail>
       <TableDetail>{coin.current_price}</TableDetail>
       <TableDetail>{coin.market_cap}</TableDetail>
       <TableDetail>{coin.market_cap_rank}</TableDetail>

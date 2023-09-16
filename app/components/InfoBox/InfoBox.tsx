@@ -20,7 +20,7 @@ function InfoBox({
 
   const renderInformationLines = () => {
     return information.split("\n").map((line, index) => (
-      <p key={index} className="mb-2">
+      <p key={index} className="p-1 text-white float-left">
         {line}
       </p>
     ));
@@ -29,9 +29,9 @@ function InfoBox({
   return (
     <div className="relative inline-block">
       <div
-        className={`absolute top-3 left-0.5 -translate-x-0.5  w-36 p-4 bg-teal-100
-          border-2 border-slate-950 rounded-md text-sm font-medium opacity-0 duration-0 ${style} ${
-          showInfo ? "visible opacity-95" : "hidden"
+        className={`absolute top-3 left-0.5 -translate-x-0.5  w-36 p-4 bg-neutral-600
+          text-sm font-light opacity-0 duration-0 rounded-lg ${style} ${
+          showInfo ? "visible opacity-100" : "hidden"
         }`}
         onMouseEnter={() => {
           if (window.innerWidth >= 768) {
