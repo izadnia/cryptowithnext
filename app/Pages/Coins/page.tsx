@@ -1,11 +1,12 @@
-import React from "react";
+import ContainerComponents from "@/app/components/container/ContainerComponents";
+import CoinMarket from "./market/CoinMarket";
 
 function Page() {
   return (
-    <div className="p-4">
-      Coins
-      <div>markets</div>
-      
+    <div>
+      <ContainerComponents titleSize="text-2xl" title="Coins">
+        <CoinMarket />
+      </ContainerComponents>
     </div>
   );
 }

@@ -1,44 +1,32 @@
 import CardFliper from "./components/card-flip/cardFliper";
 import CardCoin from "./components/Card/CardCoin";
+import ContainerComponents from "./components/container/ContainerComponents";
 import Introduction from "./components/Introduction/Introduction";
 import Slider from "./components/Slider/Slider";
 import { plans } from "./utils/plans";
 
-function ContainerComponents({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="w-[100%] mt-8">
-      <h1 className=" text-3xl my-4 px-1">{title}</h1>
-      {children}
-    </div>
-  );
-}
+
 
 export default function Home() {
   return (
     <main>
       {/* section 1 : introduction */}
-      <ContainerComponents title="IRAN Crypto Hub">
+      <ContainerComponents titleSize="text-3xl" title="IRAN Crypto Hub">
         <Introduction />
       </ContainerComponents>
 
       {/* section 2 : List Of coins in Shape of Cards*/}
-      <ContainerComponents title="Worlds Top Ranking Coins:">
+      <ContainerComponents titleSize="text-3xl" title="Worlds Top Ranking Coins:">
         <CardCoin />
       </ContainerComponents>
 
       {/* Section 3 : Slider Of Recent News  */}
-      <ContainerComponents title="Worlds Latest News:">
+      <ContainerComponents titleSize="text-3xl" title="Worlds Latest News:">
         <Slider />
       </ContainerComponents>
 
       {/* Section 4 : Plans of The company */}
-      <ContainerComponents title="Get your 30% Discounts:">
+      <ContainerComponents titleSize="text-3xl" title="Get your 30% Discounts:">
         <CardFliper prop={plans} />
       </ContainerComponents>
 

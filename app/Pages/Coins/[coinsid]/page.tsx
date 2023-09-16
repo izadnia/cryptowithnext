@@ -13,7 +13,7 @@ function Page() {
 
   return (
     <div>
-      <div>{coinName}</div>
+      <div> fsdf {coinName}</div>
     </div>
   );
 }
