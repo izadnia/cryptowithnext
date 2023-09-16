@@ -17,9 +17,9 @@ export default function TableHeader({ data }: { data?: string }) {
   } else if (data == "symbol") {
     return (
       <TableHeadTile>
-        <InfoBox information="Coin Symbol" />
+        
         <br />
-        Sym
+        Symbol
       </TableHeadTile>
 
     );
