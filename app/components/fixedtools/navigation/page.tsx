@@ -4,7 +4,7 @@ import { useSelectedLayoutSegments } from "next/navigation";
 
 function Nav() {
   const segment = useSelectedLayoutSegments();
-  console.log(segment);
+
   return (
     <div className="flex p-4 justify-around">
       <div className="flex justify-start">
