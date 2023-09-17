@@ -8,7 +8,7 @@ function TableOfCoins() {
 
   return (
     <div className="h-[28rem] overflow-scroll">
-      <table className="relative w-full border border-slate-400 ">
+      <table className="relative w-full  ">
         <thead className="w-full sticky bg-white -top-1">
           <tr className="">
             <th className={`p-1 items-center  hover:bg-neutral-200`}><br/>Avatar</th>

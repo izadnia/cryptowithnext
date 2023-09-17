@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MdInfoOutline } from "react-icons/md";
+import { MdInfoOutline, MdOutlineClear } from "react-icons/md";
 
 function InfoBox({
   information,
@@ -44,7 +44,12 @@ function InfoBox({
           }
         }}
       >
-        <div className="text-white sticky border-2 border-white rounded-md w-16 p-1" onClick={()=>setShowInfo(false)}>CLOSE</div>
+        <div
+          className="text-white sticky  cursor-pointer  rounded-md w-9 p-2"
+          onClick={() => setShowInfo(false)}
+        >
+          <MdOutlineClear />
+        </div>
         {renderInformationLines()}
       </div>
       <div

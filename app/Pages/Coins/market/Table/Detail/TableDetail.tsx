@@ -13,9 +13,9 @@ export default function TableDetail({
     children: React.ReactNode;
   }) {
     if(image){
-      return <td className={`p-2 ${TWstyle}`}><Image src={text} width={40} height={40} alt={text} /></td>
+      return <td className={`p-2 top-14 ${TWstyle}`}><Image src={text} width={40} height={40} alt={text} /></td>
     }else{
-      return <td className={`p-2  ${TWstyle}`}>{children}</td>
+      return <td className={`p-2 top-14 ${TWstyle}`}>{children}</td>
     }
    ;
   }
